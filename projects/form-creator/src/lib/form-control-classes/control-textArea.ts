@@ -1,7 +1,7 @@
 import { FormControlBase } from '../models/form-control-base';
 
-export class InputTextBox extends FormControlBase<string> {
-  controlType = 'textbox';
+export class InputTextArea extends FormControlBase<string> {
+  controlType = 'textarea';
   type: string;
 
   constructor(options: {} = {}) {

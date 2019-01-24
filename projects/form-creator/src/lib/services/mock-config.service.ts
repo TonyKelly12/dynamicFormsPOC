@@ -3,6 +3,7 @@ import { Injectable }       from '@angular/core';
 import { FormControlBase} from '../models/form-control-base';
 import { InputTextBox } from './../form-control-classes/control-textBox';
 import {DropdownControl } from '../form-control-classes/control-dropdown'
+import { InputTextArea } from '../form-control-classes/control-textArea';
 
 @Injectable()
 export class MockFormConfigService {
@@ -33,11 +34,11 @@ export class MockFormConfigService {
         order: 1
       }),
 
-      new InputTextBox({
-        key: 'emailAddress',
-        label: 'Email',
-        type: 'email',
-        order: 2
+      new InputTextArea({
+        key: 'description',
+        label: 'Description',
+        type: 'text',
+        order: 4
       })
     ];
 
