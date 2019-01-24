@@ -10,14 +10,14 @@ import { FormControlBase } from 'projects/form-creator/src/lib/models/form-contr
 })
 export class DynamicFormComponent implements OnInit {
 
-  @Input() questions: FormControlBase<any>[] = [];
+  @Input() configs: FormControlBase<any>[] = [];
   form: FormGroup;
   payLoad = '';
 
   constructor(private fcs: FormControlService) {  }
 
   ngOnInit() {
-    this.form = this.fcs.toFormGroup(this.questions);
+    this.form = this.fcs.toFormGroup(this.configs);
   }
 
   onSubmit() {

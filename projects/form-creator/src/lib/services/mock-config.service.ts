@@ -5,19 +5,19 @@ import { InputTextBox } from './../form-control-classes/control-textBox';
 import {DropdownControl } from '../form-control-classes/control-dropdown'
 
 @Injectable()
-export class QuestionService {
+export class MockFormConfigService {
 
   // TODO: get from a remote source of question metadata
   // TODO: make asynchronous
   getQuestions() {
 
-    let questions: FormControlBase<any>[] = [
+    let configs: FormControlBase<any>[] = [
 
       new DropdownControl({
         key: 'brave',
         label: 'Bravery Rating',
         options: [
-          {key: 'solid',  value: 'Solid'},
+          {key: 'ehh',  value: 'Ehh'},
           {key: 'great',  value: 'Great'},
           {key: 'good',   value: 'Good'},
           {key: 'unproven', value: 'Unproven'}
@@ -41,6 +41,6 @@ export class QuestionService {
       })
     ];
 
-    return questions.sort((a, b) => a.order - b.order);
+    return configs.sort((a, b) => a.order - b.order);
   }
 }

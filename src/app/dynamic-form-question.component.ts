@@ -8,7 +8,10 @@ import { FormControlBase } from 'projects/form-creator/src/lib/models/form-contr
   templateUrl: './dynamic-form-question.component.html'
 })
 export class DynamicFormQuestionComponent {
-  @Input() question: FormControlBase<any>;
+  @Input() config: FormControlBase<any>;
   @Input() form: FormGroup;
-  get isValid() { return this.form.controls[this.question.key].valid; }
+
+  get isValid() { return this.form.controls[this.config.key].valid; }
+
+
 }
