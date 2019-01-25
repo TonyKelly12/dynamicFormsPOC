@@ -3,7 +3,7 @@ import { Injectable }       from '@angular/core';
 import { FormControlBase} from '../models/form-control-base';
 import { InputTextBox } from './../form-control-classes/control-textBox';
 import {DropdownControl } from '../form-control-classes/control-dropdown'
-import { InputTextArea } from '../form-control-classes/control-textArea';
+import { InputRadio } from '../form-control-classes/control-radio';
 
 @Injectable()
 export class MockFormConfigService {
@@ -34,11 +34,13 @@ export class MockFormConfigService {
         order: 1
       }),
 
-      new InputTextArea({
-        key: 'description',
-        label: 'Description',
-        type: 'text',
-        order: 4
+      new InputRadio({
+        key: 'emailAddress',
+        label: 'Email',
+        checked: false,
+        value: 'Yes',
+        name: 'email',
+        order: 2
       })
     ];
 
