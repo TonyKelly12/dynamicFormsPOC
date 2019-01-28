@@ -1,17 +1,17 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
-export class InputRadio extends FormControlBase<string> {
-  controlType = 'radio';
-  name: string;
-  value: string;
-  checked: boolean;
+/**
+ * Input field with "email" validation
+ * Requires Bootsrap 4.* to properly Validate
+ *  */
+export class InputEmail extends FormControlBase<string> {
+  controlType = 'email';
+  type: string;
 
   constructor(options: formOptions = {}) {
      // Because this class derived from FormControlBase must call super and pass in options
     super(options);
+    this.type = options['type'] || '';
     this.name = options['name'] || '';
-    this.value = options['value'] || '';
-    this.checked = options['checked'] || false;
-
   }
 }

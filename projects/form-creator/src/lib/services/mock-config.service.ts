@@ -6,6 +6,10 @@ import {DropdownControl } from '../form-control-classes/control-dropdown'
 import { InputRadio } from '../form-control-classes/control-radio';
 import { InputTextArea } from '../form-control-classes/control-textarea';
 import { InputCheckbox } from '../form-control-classes/control-checkbox';
+import { InputPassword } from '../form-control-classes/control-password';
+import { InputEmail } from '../form-control-classes/control-email';
+import { InputSubmitButton } from '../form-control-classes/control-submit-button';
+import { InputColor } from '../form-control-classes/control-color';
 
 @Injectable()
 export class MockFormConfigService {
@@ -19,13 +23,13 @@ export class MockFormConfigService {
       new DropdownControl({
         key: 'brave',
         label: 'Bravery Rating',
-        options: [
+        dropOptions: [
           {key: 'ehh',  value: 'Ehh'},
           {key: 'great',  value: 'Great'},
           {key: 'good',   value: 'Good'},
           {key: 'unproven', value: 'Unproven'}
         ],
-        order: 3
+        order: 4
       }),
 
       new InputTextBox({
@@ -34,6 +38,33 @@ export class MockFormConfigService {
         value: 'Bombasto',
         required: true,
         order: 1
+      }),
+
+      new InputEmail({
+        key: 'lastName',
+        label: 'Last Name',
+        value: 'Bomb',
+        required: true,
+        order: 7
+      }),
+
+      new InputPassword({
+        key: 'password',
+        label: 'Password',
+        required: true,
+        order: 6
+      }),
+
+      new InputSubmitButton({
+        key: 'submit',
+        buttonLabel: 'Submit Me',
+        order: 8
+      }),
+
+      new InputSubmitButton({
+        key: 'rest',
+        buttonLabel: 'Reset Me',
+        order: 9
       }),
 
       new InputRadio({
@@ -51,7 +82,7 @@ export class MockFormConfigService {
         checked: true,
         value: 'Yes',
         name: 'checking',
-        order: 5
+        order: 3
       }),
 
       new InputTextArea({
@@ -59,7 +90,15 @@ export class MockFormConfigService {
         label: 'Description',
         value: 'Write Description here',
         required: false,
-        order: 4
+        order: 5
+
+      }),
+      new InputColor({
+        key: 'color',
+        label: 'Choose Color',
+        required: false,
+        order: 8
+
       }),
 
     ];
