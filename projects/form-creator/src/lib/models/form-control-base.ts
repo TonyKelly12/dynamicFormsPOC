@@ -10,6 +10,7 @@ export class FormControlBase<T> {
   isValid: boolean;
   validationError: string;
   checked: boolean;
+  formGroup: string;
 
   constructor(options: {
       value?: T,
@@ -22,6 +23,7 @@ export class FormControlBase<T> {
       isValid?: boolean,
       validationError?: string,
       checked?: boolean
+      formGroup?: string
     } = {}) {
     this.value = options.value;
     this.name = options.name || '';
@@ -33,5 +35,6 @@ export class FormControlBase<T> {
     this.isValid = options.isValid || false;
     this.validationError = options.validationError || '';
     this.checked = options.checked || false;
+    this.formGroup = options.formGroup;
   }
 }

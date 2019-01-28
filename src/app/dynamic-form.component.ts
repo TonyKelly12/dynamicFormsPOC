@@ -1,3 +1,4 @@
+
 import { FormControlService } from './../../projects/form-creator/src/lib/services/form-control.service';
 import { Component, Input, OnInit }  from '@angular/core';
 import { FormGroup }                 from '@angular/forms';
@@ -16,7 +17,7 @@ export class DynamicFormComponent implements OnInit {
 
   constructor(private fcs: FormControlService) {  }
 
-  ngOnInit() {
+   ngOnInit() {
     this.form = this.fcs.toFormGroup(this.configs);
   }
 

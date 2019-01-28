@@ -1,19 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup }        from '@angular/forms';
+
+import { FormControlBase } from 'projects/form-creator/src/lib/models/form-control-base';
 
 @Component({
-  selector: 'lib-form-creator',
-  template: `
-    <p>
-      form-creator works!
-    </p>
-  `,
-  styles: []
+  selector: 'form-creator',
+  templateUrl: './form-creator.component.html',
 })
-export class FormCreatorComponent implements OnInit {
+export class FormCreatorComponent {
+  @Input() config: FormControlBase<any>;
+  @Input() form: FormGroup;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  get isValid() { return this.form.controls[this.config.key].valid; }
 }

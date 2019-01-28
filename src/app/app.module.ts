@@ -9,7 +9,7 @@ import {FormCreatorModule} from '../../projects/form-creator/src/lib/form-creato
 
 @NgModule({
   imports: [ BrowserModule, ReactiveFormsModule, FormCreatorModule ],
-  declarations: [ AppComponent, DynamicFormComponent, DynamicFormQuestionComponent, ],
+  declarations: [ AppComponent, DynamicFormComponent, DynamicFormQuestionComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

@@ -15,6 +15,6 @@ export class AppComponent {
   formConfigs: any[];
 
   constructor(service: MockFormConfigService) {
-    this.formConfigs = service.getQuestions();
+    this.formConfigs = service.getFormConfigs();
   }
 }

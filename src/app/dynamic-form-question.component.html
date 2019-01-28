@@ -1,18 +1,66 @@
 <div [formGroup]="form">
-  <label [attr.for]="config.key">{{config.label}}</label>
+  <label [attr.for]="config.key">{{ config.label }}</label>
 
   <div [ngSwitch]="config.controlType">
+    <input
+      *ngSwitchCase="'textbox'"
+      [formControlName]="config.key"
+      [id]="config.key"
+      [type]="config.controlType"
+    />
 
-    <input *ngSwitchCase="'textbox'" [formControlName]="config.key"
-            [id]="config.key" [type]="config.controlType">
-
-    <select [id]="config.key" *ngSwitchCase="'dropdown'" [formControlName]="config.key">
-      <option *ngFor="let opt of config.options" [value]="opt.key">{{opt.value}}</option>
+    <select
+      [id]="config.key"
+      *ngSwitchCase="'dropdown'"
+      [formControlName]="config.key"
+    >
+      <option *ngFor="let opt of config.options" [value]="opt.key">{{
+        opt.value
+      }}</option>
     </select>
 
-    <input *ngSwitchCase="'radio'" [id]="config.key" [formControlName]="config.key" value="config.value" [type]="config.controlType" [name]="config.name" [checked]="config.checked">
+    <input
+      *ngSwitchCase="'radio'"
+      [id]="config.key"
+      [formControlName]="config.key"
+      value="config.value"
+      [type]="config.controlType"
+      [name]="config.name"
+      [checked]="config.checked"
+    />
 
+    <input
+      *ngSwitchCase="'checkbox'"
+      [id]="config.key"
+      [formControlName]="config.key"
+      value="config.value"
+      [type]="config.controlType"
+      [name]="config.name"
+      [checked]="config.checked"
+    />
+    <!-- TODO: In the controler Base class add properties for col and rows-->
+    <!-- TODO: Add a text area class-->
+    <textarea
+      *ngSwitchCase="'textarea'"
+      [formControlName]="config.key"
+      [name]="config.name"
+      [id]="config.key"
+      cols="30"
+      rows="10"
+      placeholder="Testing Placeholder"
+    ></textarea>
+
+    <!-- TODO: In the controler Base class add properties for submit button-->
+    <!--TODO: Add a submit button class-->
+    <!-- TODO: In the controler Base class add properties for output-->
+    <!--TODO: Add a output class-->
+    <!-- TODO: In the controler Base class add properties for data list -->
+    <!--TODO: Add a submit button class-->
+    <!-- TODO: In the controler Base class add properties for datalist-->
+    <!--TODO: Add a output class-->
   </div>
 
-  <div class="errorMessage" *ngIf="!isValid">{{config.label}} is required</div>
+  <div class="errorMessage" *ngIf="!isValid">
+    {{ config.label }} is required
+  </div>
 </div>

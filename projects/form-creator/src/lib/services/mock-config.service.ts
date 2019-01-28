@@ -4,13 +4,15 @@ import { FormControlBase} from '../models/form-control-base';
 import { InputTextBox } from './../form-control-classes/control-textBox';
 import {DropdownControl } from '../form-control-classes/control-dropdown'
 import { InputRadio } from '../form-control-classes/control-radio';
+import { InputTextArea } from '../form-control-classes/control-textarea';
+import { InputCheckbox } from '../form-control-classes/control-checkbox';
 
 @Injectable()
 export class MockFormConfigService {
 
   // TODO: get from a remote source of question metadata
   // TODO: make asynchronous
-  getQuestions() {
+  getFormConfigs() {
 
     let configs: FormControlBase<any>[] = [
 
@@ -41,7 +43,25 @@ export class MockFormConfigService {
         value: 'Yes',
         name: 'email',
         order: 2
-      })
+      }),
+
+      new InputCheckbox({
+        key: 'checking',
+        label: 'Yes?',
+        checked: true,
+        value: 'Yes',
+        name: 'checking',
+        order: 5
+      }),
+
+      new InputTextArea({
+        key: 'description',
+        label: 'Description',
+        value: 'Write Description here',
+        required: false,
+        order: 4
+      }),
+
     ];
 
     return configs.sort((a, b) => a.order - b.order);
