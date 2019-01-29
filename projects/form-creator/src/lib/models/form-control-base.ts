@@ -267,12 +267,11 @@ export class FormControlBase<T> {
     this.controlType = options.controlType || '';
 
     // The !! Coerces Object to boolean. If it was falsey (e.g. 0, null, undefined, etc.), it will be false, otherwise, true.
-
     this.disabled = !!options.disabled;
     this.readonly = !!options.readonly;
     this.autocomplete = !!options.autocomplete;
     this.novalidate = !!options.novalidate;
-    this.autofocus = !! options.autofocus;
+    this.autofocus = !!options.autofocus;
 
     this.isValid = options.isValid || false;
     this.validation = options.validation || [];

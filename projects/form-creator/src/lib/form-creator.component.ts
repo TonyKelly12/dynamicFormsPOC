@@ -11,5 +11,6 @@ export class FormCreatorComponent {
   @Input() config: FormControlBase<any>;
   @Input() form: FormGroup;
 
+  // Getter for the property isValid to verify if form is valid for submission
   get isValid() { return this.form.controls[this.config.key].valid; }
 }

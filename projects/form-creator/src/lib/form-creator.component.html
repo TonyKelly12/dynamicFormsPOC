@@ -95,7 +95,8 @@
       <output *ngSwitchCase="'output'" [name]="config.name" [for]="config.for"></output>
 
   </div>
-
+  <!--TODO: Add property for error message -->
+<!--Error Message for each element-->
   <div class="errorMessage" *ngIf="!isValid">
     {{ config.label }} is required
   </div>
