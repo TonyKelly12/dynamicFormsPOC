@@ -65,7 +65,7 @@ export class MockFormConfigService {
       new InputPassword({
         key: 'password',
         label: 'Password',
-        validation:[Validators.required],
+        validation:[Validators.required, Validators.minLength(5)],
         order: 6
       }),
 
