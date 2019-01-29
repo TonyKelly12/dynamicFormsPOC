@@ -1,4 +1,4 @@
-import { FormControlBase } from '../models/form-control-base';
+import { FormControlBase } from '../../models/form-control-base';
 
 /**
  * <input type="reset"> defines a reset button that will reset all form values to their default values:

@@ -1,12 +1,12 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
- * The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+ * The <input type="month"> allows the user to select a month and year.
  * Depending on browser support, a date picker can show up in the input field.
- * (Works on Edge, Chrome, Opera)
+ * # ( Only Works For Edge, Chrome, Opera)
  *  */
-export class InputDateTime extends FormControlBase<string> {
-  controlType = 'datetime-local';
+export class InputMonth extends FormControlBase<string> {
+  controlType = 'month';
   name: string;
 
   constructor(options: formOptions = {}) {

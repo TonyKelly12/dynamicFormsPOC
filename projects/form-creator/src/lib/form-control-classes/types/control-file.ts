@@ -1,4 +1,4 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
  * The <input type="file"> defines a file-select field and a "Browse" button for file uploads.

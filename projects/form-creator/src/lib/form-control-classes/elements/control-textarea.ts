@@ -1,4 +1,4 @@
-import { FormControlBase, formOptions } from "../models/form-control-base";
+import { FormControlBase, formOptions } from "../../models/form-control-base";
 
 /**
  * The <textarea> element defines a multi-line input field (a text area):

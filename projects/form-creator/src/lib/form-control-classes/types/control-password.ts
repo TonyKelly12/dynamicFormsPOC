@@ -1,4 +1,4 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
  * <input type="password"> defines a password field:

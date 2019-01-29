@@ -1,4 +1,4 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
  * The <input type="time"> allows the user to select a time (no time zone).

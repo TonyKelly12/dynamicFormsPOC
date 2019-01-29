@@ -1,4 +1,4 @@
-import { FormControlBase } from '../models/form-control-base';
+import { FormControlBase } from '../../models/form-control-base';
 
 /**
  * The <button> element defines a clickable button with a submit type:

@@ -1,4 +1,4 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
  * The <input type="search"> is used for search fields (a search field behaves like a regular text field).

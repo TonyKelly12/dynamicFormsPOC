@@ -1,12 +1,12 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
- * The <input type="week"> allows the user to select a week and year.
+ * The <input type="datetime-local"> specifies a date and time input field, with no time zone.
  * Depending on browser support, a date picker can show up in the input field.
- *
+ * (Works on Edge, Chrome, Opera)
  *  */
-export class InputWeek extends FormControlBase<string> {
-  controlType = 'week';
+export class InputDateTime extends FormControlBase<string> {
+  controlType = 'datetime-local';
   name: string;
 
   constructor(options: formOptions = {}) {

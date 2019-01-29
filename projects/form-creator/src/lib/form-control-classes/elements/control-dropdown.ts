@@ -1,4 +1,4 @@
-import { FormControlBase } from '../models/form-control-base';
+import { FormControlBase } from '../../models/form-control-base';
 
 /**
  * The <select> element defines a drop-down list:

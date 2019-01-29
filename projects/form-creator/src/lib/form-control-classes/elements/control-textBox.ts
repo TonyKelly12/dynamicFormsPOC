@@ -1,4 +1,4 @@
-import { FormControlBase } from '../models/form-control-base';
+import { FormControlBase } from '../../models/form-control-base';
 
 /**
  * <input type="text"> defines a one-line text input field:

@@ -1,4 +1,4 @@
-import { FormControlBase } from '../models/form-control-base';
+import { FormControlBase } from '../../models/form-control-base';
 
 /**
  * <input type="checkbox"> defines a checkbox.

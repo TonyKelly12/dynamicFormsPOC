@@ -1,12 +1,12 @@
-import { FormControlBase, formOptions } from '../models/form-control-base';
+import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
- * The <input type="month"> allows the user to select a month and year.
+ * The <input type="week"> allows the user to select a week and year.
  * Depending on browser support, a date picker can show up in the input field.
- * # ( Only Works For Edge, Chrome, Opera)
+ *
  *  */
-export class InputMonth extends FormControlBase<string> {
-  controlType = 'month';
+export class InputWeek extends FormControlBase<string> {
+  controlType = 'week';
   name: string;
 
   constructor(options: formOptions = {}) {

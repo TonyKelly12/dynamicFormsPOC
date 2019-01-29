@@ -20,6 +20,7 @@ export interface formOptions{
       checked?: boolean,
 
       alt?: string,
+      placeholder?: string,
       validationError?: string,
       dropOptions?:{key: string, value: string}[],
       listName?:string,
@@ -28,11 +29,15 @@ export interface formOptions{
       rows?: string,
       min?: string,
       max?: string,
+      height?: string,
+      width?: string,
 
 
       maxlength?: string,
       step?: string,
       size?: string,
+      multiple?: boolean,
+      pattern?: string,
 
       form?: string,
       action?: string,
@@ -47,13 +52,22 @@ export interface formOptions{
  * The List of HTML5 Attributes to add to elements
  */
 export class FormControlBase<T> {
-  id?: string;
+      id?: string;
       class?: string;
+
       /**
        * The value attribute specifies the initial value for an input field:
        */
       value?: any ;
+
+      /**
+       * Value of the name property on an input
+       */
       name?: string;
+
+      /**
+       * The key of the input field usually the type of input
+       */
       key?: string;
 
       /**
@@ -66,13 +80,19 @@ export class FormControlBase<T> {
        */
       order?: number;
 
-      /** Specifies the input type. Example: "text", "radio" */
+      /**
+       * Specifies the input type. Example: "text", "radio"
+       */
       controlType?: string;
 
-      /** When using reactive forms, Specifies the form the input belongs to */
+      /**
+       * When using reactive forms, Specifies the form the input belongs to
+      */
       formGroup?: string;
 
-      /** Specifies if a input fiels is required to submit */
+      /**
+       * Specifies if a input fiels is required to submit
+       */
       required?: boolean;
 
       /**
@@ -127,23 +147,84 @@ export class FormControlBase<T> {
        **/
       novalidate?: boolean;
 
-      /** The autofocus attribute specifies that the input field should automatically get focus when the page loads. */
+      /**
+       * The autofocus attribute specifies that the input field should automatically get focus when the page loads.
+       */
       autofocus?: boolean;
+
+      /**
+       * Verify if the state of the form is in a valid state to submit
+       */
       isValid?: boolean;
+
+      /**
+       * Used to tell checkbox or radio buttons if their state should start of checked or selcted
+       */
       checked?: boolean;
 
+      /** Sets the placeholder text in a form element */
+      placeholder?: string;
+
+      /**
+       * Sets the alt text on a element.
+       */
       alt?: string;
+
+      /** Sets validation Error */
       validationError?: string;
+
+      /** The dropdown otions in a dropdown menu */
       dropOptions?:{key: string, value: string}[];
-      listName?:string;
+
+      /**
+       * The list attribute refers to a <datalist> element that contains pre-defined options for an <input> element.
+       */
+      list?:string;
+
+      /** Sets the label on a button element */
       buttonLabel?:string;
+
+      /**
+       * The multiple attribute specifies that the user is allowed to enter more than one value in the <input> element.
+       * The multiple attribute works with the following input types: email, and file.
+       */
+      multiple?: boolean;
+
+      /**
+       * The pattern attribute specifies a regular expression that the <input> element's value is checked against.
+       * The pattern attribute works with the following input types: text, search, url, tel, email, and password.
+       * Tip: Use the global title attribute to describe the pattern to help the user.
+       * Tip: Learn more about regular expressions in our JavaScript tutorial.
+       */
+      pattern?: string;
+
+      /** The cols attribute specifies the visible width of a text area. */
       cols?: string;
+
+      /** The rows attribute specifies the visible number of lines in a text area. */
       rows?: string;
+
+      /** The height and width attributes specify the height and width of an <input type="image"> element. */
+      height?: string;
+      /** The height and width attributes specify the height and width of an <input type="image"> element. */
+      width?: string;
+
+      /**
+       * The min attributes specify the minimum values for an <input> element.
+       * The min attributes work with the following input types: number, range, date, datetime-local, month, time and week.
+       */
       min?: string;
+
+      /**
+       * The max attributes specify the maximum values for an <input> element.
+       * The max attributes work with the following input types: number, range, date, datetime-local, month, time and week.
+       */
       max?: string;
 
       /** The maxlength attribute specifies the maximum allowed length for the input field: */
       maxlength?: string;
+
+      /** Specifies the legal number intervals for an input field */
       step?: string;
 
       /** The autofocus attribute specifies that the input field should automatically get focus when the page loads. */
@@ -199,24 +280,26 @@ export class FormControlBase<T> {
     this.checked = options.checked || false;
 
     this.dropOptions = options.dropOptions;
-    this.listName = options.listName;
+    this.list = options.listName;
     this.buttonLabel = options.buttonLabel;
+    this.placeholder = options.placeholder;
 
     this.cols = options.cols;
     this.rows = options.rows;
     this.min = options.min;
     this.max = options.max;
+    this.height = options.height;
+    this.width = options.width;
     this.maxlength = options.maxlength;
     this.alt = options.alt;
     this.step = options.step;
     this.size = options.size;
+    this.multiple = options.multiple;
+
     this.onClick = options.onClick;
-
-
     this.action = options.action;
-
-
     this.formaction = options.formaction;
+    this.form = options.form;
   }
 
 }
