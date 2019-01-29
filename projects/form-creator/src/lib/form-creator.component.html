@@ -91,13 +91,9 @@
       <!-- Reset Button -->
       <button *ngSwitchCase="'reset'" [class]="config.class" [id]="config.key">{{config.buttonLabel}}</button>
 
+      <!--Output Element-->
+      <output *ngSwitchCase="'output'" [name]="config.name" [for]="config.for"></output>
 
-    <!-- TODO: In the controler Base class add properties for output-->
-    <!--TODO: Add a output class-->
-    <!-- TODO: In the controler Base class add properties for data list -->
-    <!--TODO: Add a submit button class-->
-    <!-- TODO: In the controler Base class add properties for datalist-->
-    <!--TODO: Add a output class-->
   </div>
 
   <div class="errorMessage" *ngIf="!isValid">

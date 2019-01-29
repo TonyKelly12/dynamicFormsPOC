@@ -1,3 +1,4 @@
+import { OutputControl } from './../form-control-classes/elements/control-output';
 import { InputURL } from '../form-control-classes/types/control-url';
 import { Injectable }       from '@angular/core';
 
@@ -168,8 +169,18 @@ export class MockFormConfigService {
         required: false,
         order: 15,
         min: "0",
-        max: "35"
+        max: "35",
+        id: "range"
       }),
+
+      new OutputControl({
+        key: 'output',
+        label: 'Slider Value',
+        required: false,
+        order: 16,
+        for: "range",
+        name: "x"
+      })
 
     ];
 

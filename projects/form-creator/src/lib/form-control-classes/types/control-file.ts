@@ -2,7 +2,7 @@ import { FormControlBase, formOptions } from '../../models/form-control-base';
 
 /**
  * The <input type="file"> defines a file-select field and a "Browse" button for file uploads.
- * ** Works on all Browsers**
+ * ** Works on all Browsers **
  *  */
 export class InputFile extends FormControlBase<string> {
   controlType = 'file';

@@ -1,5 +1,5 @@
 <div>
-  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" oninput="x.value=parseInt(range.value)">
 
     <div *ngFor="let config of configs" class="form-row">
       <form-creator [config]="config" [form]="form"></form-creator>

@@ -31,6 +31,7 @@ export interface formOptions{
       max?: string,
       height?: string,
       width?: string,
+      for?: string,
 
 
       maxlength?: string,
@@ -49,7 +50,7 @@ export interface formOptions{
       onClick?: string,
 }
 /**
- * The List of HTML5 Attributes to add to elements
+ * The base class that supllies all of the form Attributes to add to elements
  */
 export class FormControlBase<T> {
       id?: string;
@@ -90,6 +91,9 @@ export class FormControlBase<T> {
       */
       formGroup?: string;
 
+      /** Used with <output> Describes what element(s) the output is for */
+      for?:string;
+
       /**
        * Specifies if a input fiels is required to submit
        */
@@ -121,7 +125,6 @@ export class FormControlBase<T> {
        * The formtarget attribute can be used with type="submit" and type="image".
        */
       formtarget?: string;
-
 
       /**
        * The disabled attribute specifies that the input field is disabled.
@@ -173,7 +176,7 @@ export class FormControlBase<T> {
       /** Sets validation Error */
       validationError?: string;
 
-      /** The dropdown otions in a dropdown menu */
+      /** Sets the dropdown otions in a dropdown menu */
       dropOptions?:{key: string, value: string}[];
 
       /**
@@ -249,7 +252,7 @@ export class FormControlBase<T> {
      */
       formaction?: string;
 
-       /**
+    /**
      * onClick action for buttons.
      * Pass in the function to call as string
      */
@@ -295,6 +298,7 @@ export class FormControlBase<T> {
     this.step = options.step;
     this.size = options.size;
     this.multiple = options.multiple;
+    this.for = options.for;
 
     this.onClick = options.onClick;
     this.action = options.action;
