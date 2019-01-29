@@ -20,6 +20,7 @@ import { InputPhone } from '../form-control-classes/types/control-phone';
 import { InputTime } from '../form-control-classes/types/control-time';
 import { InputWeek } from '../form-control-classes/types/control-week';
 import { InputRange } from '../form-control-classes/types/control-range';
+import { Validators } from '@angular/forms';
 
 @Injectable()
 /** Mock Form config file */
@@ -49,7 +50,7 @@ export class MockFormConfigService {
         key: 'firstName',
         label: 'First name',
         value: 'Bombasto',
-        required: true,
+        validation:[Validators.required],
         order: 1
       }),
 
@@ -57,14 +58,14 @@ export class MockFormConfigService {
         key: 'lastName',
         label: 'Last Name',
         value: 'Bomb',
-        required: true,
+        validation:[Validators.required],
         order: 7
       }),
 
       new InputPassword({
         key: 'password',
         label: 'Password',
-        required: true,
+        validation:[Validators.required],
         order: 6
       }),
 
@@ -102,70 +103,61 @@ export class MockFormConfigService {
         key: 'description',
         label: 'Description',
         value: 'Write Description here',
-        required: false,
+        validation:[Validators.required],
         order: 5
       }),
 
       new InputColor({
         key: 'color',
         label: 'Choose Color',
-        required: false,
         order: 8
       }),
 
       new InputDate({
         key: 'date',
         label: 'Choose Date',
-        required: false,
         order: 9
       }),
 
       new InputFile({
         key: 'file',
         label: 'Choose a file',
-        required: false,
         order: 10
       }),
 
       new InputDateTime({
         key: 'datetime',
         label: 'Choose Date',
-        required: false,
         order: 11
       }),
 
       new InputSearch({
         key: 'search',
         label: 'Search',
-        required: false,
         order: 12
       }),
 
       new InputTime({
         key: 'time',
         label: 'Time',
-        required: false,
         order: 13
       }),
 
       new InputURL({
         key: 'url',
         label: 'URL',
-        required: false,
         order: 14
       }),
 
       new InputWeek({
         key: 'week',
         label: 'Week',
-        required: false,
         order: 15
       }),
 
       new InputRange({
         key: 'range',
         label: 'Range',
-        required: false,
         order: 15,
         min: "0",
         max: "35",
@@ -175,7 +167,6 @@ export class MockFormConfigService {
       new OutputControl({
         key: 'output',
         label: 'Slider Value',
-        required: false,
         order: 16,
         for: "range",
         name: "x"

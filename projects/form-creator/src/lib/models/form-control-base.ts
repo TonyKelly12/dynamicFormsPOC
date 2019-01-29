@@ -1,3 +1,4 @@
+import { Validators } from '@angular/forms';
 import { formOptions } from './form-control-base';
 export interface formOptions{
       id?: string,
@@ -10,7 +11,7 @@ export interface formOptions{
       controlType?: string,
       formGroup?: string,
 
-      required?: boolean,
+
       disabled?: boolean,
       readonly?: boolean,
       autocomplete?: boolean,
@@ -21,7 +22,7 @@ export interface formOptions{
 
       alt?: string,
       placeholder?: string,
-      validationError?: string,
+      validation?: Validators[],
       dropOptions?:{key: string, value: string}[],
       listName?:string,
       buttonLabel?:string,
@@ -93,11 +94,6 @@ export class FormControlBase<T> {
 
       /** Used with <output> Describes what element(s) the output is for */
       for?:string;
-
-      /**
-       * Specifies if a input fiels is required to submit
-       */
-      required?: boolean;
 
       /**
        * The formenctype attribute specifies how the form data should be encoded when submitted (only for forms with method="post").
@@ -174,7 +170,7 @@ export class FormControlBase<T> {
       alt?: string;
 
       /** Sets validation Error */
-      validationError?: string;
+      validation?: Validators[];
 
       /** Sets the dropdown otions in a dropdown menu */
       dropOptions?:{key: string, value: string}[];
@@ -271,7 +267,7 @@ export class FormControlBase<T> {
     this.controlType = options.controlType || '';
 
     // The !! Coerces Object to boolean. If it was falsey (e.g. 0, null, undefined, etc.), it will be false, otherwise, true.
-    this.required = !!options.required;
+
     this.disabled = !!options.disabled;
     this.readonly = !!options.readonly;
     this.autocomplete = !!options.autocomplete;
@@ -279,7 +275,7 @@ export class FormControlBase<T> {
     this.autofocus = !! options.autofocus;
 
     this.isValid = options.isValid || false;
-    this.validationError = options.validationError || '';
+    this.validation = options.validation || [];
     this.checked = options.checked || false;
 
     this.dropOptions = options.dropOptions;
