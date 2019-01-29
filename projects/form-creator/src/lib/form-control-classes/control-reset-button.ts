@@ -1,5 +1,8 @@
 import { FormControlBase } from '../models/form-control-base';
 
+/**
+ * <input type="reset"> defines a reset button that will reset all form values to their default values:
+ */
 export class InputResetButton extends FormControlBase<string> {
   controlType = 'reset';
   buttonLabel: string;

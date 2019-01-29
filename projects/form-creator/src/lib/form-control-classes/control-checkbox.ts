@@ -1,5 +1,9 @@
 import { FormControlBase } from '../models/form-control-base';
 
+/**
+ * <input type="checkbox"> defines a checkbox.
+ * Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+ */
 export class InputCheckbox extends FormControlBase<string> {
   controlType = 'checkbox';
   name: string;

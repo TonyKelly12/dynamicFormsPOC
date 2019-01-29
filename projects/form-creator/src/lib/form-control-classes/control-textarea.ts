@@ -1,5 +1,10 @@
 import { FormControlBase, formOptions } from "../models/form-control-base";
 
+/**
+ * The <textarea> element defines a multi-line input field (a text area):
+ * # The rows attribute specifies the visible number of lines in a text area.
+ * # The cols attribute specifies the visible width of a text area.
+ */
 export class InputTextArea extends FormControlBase<string> {
   controlType = "textarea";
   type: string;

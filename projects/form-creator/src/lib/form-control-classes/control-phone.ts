@@ -2,7 +2,7 @@ import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
  * Input field with "phone" validation
- * Only works with Safari 8 and newer
+ * (Only works with Safari 8 and newer)
  *  */
 export class InputPhone extends FormControlBase<string> {
   controlType = 'tel';

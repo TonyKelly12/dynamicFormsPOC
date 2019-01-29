@@ -1,5 +1,8 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
+/**
+ * <input type="password"> defines a password field:
+ */
 export class InputPassword extends FormControlBase<string> {
   controlType = 'password';
   type: string;

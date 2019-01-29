@@ -1,8 +1,9 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
- * Input field with "email" validation
- * Requires Bootsrap 4.* to properly Validate
+ * The <input type="number"> defines a numeric input field.
+ * You can also set restrictions on what numbers are accepted.
+ * The following example displays a numeric input field, where you can enter a value from 1 to 5:
  *  */
 export class InputNumber extends FormControlBase<string> {
   controlType = 'number';

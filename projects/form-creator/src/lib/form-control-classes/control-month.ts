@@ -1,8 +1,9 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
- * Input field with "email" validation
- * Requires Bootsrap 4.* to properly Validate
+ * The <input type="month"> allows the user to select a month and year.
+ * Depending on browser support, a date picker can show up in the input field.
+ * # ( Only Works For Edge, Chrome, Opera)
  *  */
 export class InputMonth extends FormControlBase<string> {
   controlType = 'month';

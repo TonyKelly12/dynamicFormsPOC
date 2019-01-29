@@ -1,8 +1,8 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
- * Input field with "email" validation
- * Requires Bootsrap 4.* to properly Validate
+ * The <input type="file"> defines a file-select field and a "Browse" button for file uploads.
+ * ** Works on all Browsers**
  *  */
 export class InputFile extends FormControlBase<string> {
   controlType = 'file';

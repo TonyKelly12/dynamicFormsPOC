@@ -1,7 +1,8 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
- * Input field with "time" validation
+ * The <input type="time"> allows the user to select a time (no time zone).
+ * Depending on browser support, a time picker can show up in the input field.
  *
  *  */
 export class InputTime extends FormControlBase<string> {

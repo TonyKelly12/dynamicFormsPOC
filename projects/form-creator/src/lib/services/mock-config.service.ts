@@ -18,6 +18,7 @@ import { InputSearch } from '../form-control-classes/control-search';
 import { InputPhone } from '../form-control-classes/control-phone';
 import { InputTime } from '../form-control-classes/control-time';
 import { InputWeek } from '../form-control-classes/control-week';
+import { InputRange } from '../form-control-classes/control-range';
 
 @Injectable()
 export class MockFormConfigService {
@@ -159,6 +160,15 @@ export class MockFormConfigService {
         label: 'Week',
         required: false,
         order: 15
+      }),
+
+      new InputRange({
+        key: 'range',
+        label: 'Range',
+        required: false,
+        order: 15,
+        min: "0",
+        max: "35"
       }),
 
     ];

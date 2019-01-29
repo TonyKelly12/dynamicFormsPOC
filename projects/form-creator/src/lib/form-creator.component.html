@@ -56,6 +56,16 @@
     [min]="config.min"
     [max]="config.max" />
 
+     <!-- Range -->
+     <input *ngSwitchCase="'range'"
+     [formControlName]="config.key"
+     [id]="config.key"
+     [type]="config.controlType"
+     [name]="config.name"
+     [min]="config.min"
+     [max]="config.max"
+     [step]="config.step"  />
+
      <!-- Dropdown -->
     <select *ngSwitchCase="'dropdown'" [class]="config.class" [id]="config.key" [formControlName]="config.key">
       <option *ngFor="let opt of config.dropOptions" [value]="opt.key">{{

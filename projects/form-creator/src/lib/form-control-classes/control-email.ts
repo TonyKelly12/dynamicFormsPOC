@@ -3,6 +3,7 @@ import { FormControlBase, formOptions } from '../models/form-control-base';
 /**
  * Input field with "email" validation
  * Requires Bootsrap 4.* to properly Validate
+ * (Works on Edge, Chrome, FireFox, Opera)
  *  */
 export class InputEmail extends FormControlBase<string> {
   controlType = 'email';

@@ -1,8 +1,9 @@
 import { FormControlBase, formOptions } from '../models/form-control-base';
 
 /**
- * Input field with "email" validation
- * Requires Bootsrap 4.* to properly Validate
+ * The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+ * Depending on browser support, a date picker can show up in the input field.
+ * (Works on Edge, Chrome, Opera)
  *  */
 export class InputDateTime extends FormControlBase<string> {
   controlType = 'datetime-local';
