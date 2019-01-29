@@ -22,10 +22,13 @@ import { InputWeek } from '../form-control-classes/types/control-week';
 import { InputRange } from '../form-control-classes/types/control-range';
 
 @Injectable()
+/** Mock Form config file */
 export class MockFormConfigService {
 
   // TODO: get from a remote source of question metadata
   // TODO: make asynchronous
+
+  /** Gets mock Form Config Data */
   getFormConfigs() {
 
     let configs: FormControlBase<any>[] = [
@@ -101,21 +104,20 @@ export class MockFormConfigService {
         value: 'Write Description here',
         required: false,
         order: 5
-
       }),
+
       new InputColor({
         key: 'color',
         label: 'Choose Color',
         required: false,
         order: 8
-
       }),
+
       new InputDate({
         key: 'date',
         label: 'Choose Date',
         required: false,
         order: 9
-
       }),
 
       new InputFile({
@@ -123,7 +125,6 @@ export class MockFormConfigService {
         label: 'Choose a file',
         required: false,
         order: 10
-
       }),
 
       new InputDateTime({
@@ -131,7 +132,6 @@ export class MockFormConfigService {
         label: 'Choose Date',
         required: false,
         order: 11
-
       }),
 
       new InputSearch({
@@ -139,7 +139,6 @@ export class MockFormConfigService {
         label: 'Search',
         required: false,
         order: 12
-
       }),
 
       new InputTime({

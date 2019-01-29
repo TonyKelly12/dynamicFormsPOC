@@ -9,6 +9,8 @@ export class InputTextArea extends FormControlBase<string> {
   controlType = "textarea";
   type: string;
   name: string;
+  cols: string;
+  rows: string;
 
   constructor(options: formOptions = {}) {
     // Because this class derived from FormControlBase must call super and pass in options

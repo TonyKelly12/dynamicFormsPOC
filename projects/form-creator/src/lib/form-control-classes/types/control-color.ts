@@ -7,7 +7,7 @@ import { FormControlBase, formOptions } from '../../models/form-control-base';
  *  */
 export class InputColor extends FormControlBase<string> {
   controlType = 'color';
-
+  name: string;
 
   constructor(options: formOptions = {}) {
      // Because this class derived from FormControlBase must call super and pass in options
