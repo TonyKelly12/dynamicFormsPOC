@@ -173,7 +173,6 @@ export class MockFormConfigService {
       })
 
     ];
-
     return configs.sort((a, b) => a.order - b.order);
   }
 }
