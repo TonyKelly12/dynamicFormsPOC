@@ -1,3 +1,4 @@
+import { InputURL } from './../form-control-classes/control-url';
 import { Injectable }       from '@angular/core';
 
 import { FormControlBase} from '../models/form-control-base';
@@ -10,6 +11,13 @@ import { InputPassword } from '../form-control-classes/control-password';
 import { InputEmail } from '../form-control-classes/control-email';
 import { InputSubmitButton } from '../form-control-classes/control-submit-button';
 import { InputColor } from '../form-control-classes/control-color';
+import { InputDate } from '../form-control-classes/control-date';
+import { InputFile } from '../form-control-classes/control-file';
+import { InputDateTime } from '../form-control-classes/control-datetime';
+import { InputSearch } from '../form-control-classes/control-search';
+import { InputPhone } from '../form-control-classes/control-phone';
+import { InputTime } from '../form-control-classes/control-time';
+import { InputWeek } from '../form-control-classes/control-week';
 
 @Injectable()
 export class MockFormConfigService {
@@ -99,6 +107,58 @@ export class MockFormConfigService {
         required: false,
         order: 8
 
+      }),
+      new InputDate({
+        key: 'date',
+        label: 'Choose Date',
+        required: false,
+        order: 9
+
+      }),
+
+      new InputFile({
+        key: 'file',
+        label: 'Choose a file',
+        required: false,
+        order: 10
+
+      }),
+
+      new InputDateTime({
+        key: 'datetime',
+        label: 'Choose Date',
+        required: false,
+        order: 11
+
+      }),
+
+      new InputSearch({
+        key: 'search',
+        label: 'Search',
+        required: false,
+        order: 12
+
+      }),
+
+      new InputTime({
+        key: 'time',
+        label: 'Time',
+        required: false,
+        order: 13
+      }),
+
+      new InputURL({
+        key: 'url',
+        label: 'URL',
+        required: false,
+        order: 14
+      }),
+
+      new InputWeek({
+        key: 'week',
+        label: 'Week',
+        required: false,
+        order: 15
       }),
 
     ];

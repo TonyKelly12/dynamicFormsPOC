@@ -3,40 +3,85 @@
 <!-- TODO: start with type = date and continue adding form elements -->
   <div [ngSwitch]="config.controlType">
     <!-- Text Box -->
-    <input *ngSwitchCase="'textbox'" [formControlName]="config.key" [id]="config.key" [type]="config.controlType" />
+    <input *ngSwitchCase="'textbox'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Date -->
+    <input *ngSwitchCase="'date'"
+    [formControlName]="config.key"
+    [id]="config.key"
+    [type]="config.controlType"
+    [name]="config.name"
+    [min]="config.min"
+    [max]="config.max" />
+
+    <!-- Datetime -->
+    <input *ngSwitchCase="'datetime-local'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Month -->
+    <input *ngSwitchCase="'month'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
     <!-- Password -->
-    <input *ngSwitchCase="'password'" [formControlName]="config.key" [id]="config.key" [type]="config.controlType" />
+    <input *ngSwitchCase="'password'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" />
+
     <!-- Email -->
-    <input *ngSwitchCase="'email'" [formControlName]="config.key" [id]="config.key" [type]="config.controlType" />
-     <!-- color -->
-     <input *ngSwitchCase="'color'" [formControlName]="config.key" [id]="config.key" [type]="config.controlType" />
-    <!-- Dropdown -->
-    <select *ngSwitchCase="'dropdown'" [id]="config.key" [formControlName]="config.key">
+    <input *ngSwitchCase="'email'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Search -->
+    <input *ngSwitchCase="'search'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Phone (Safari only) -->
+    <input *ngSwitchCase="'tel'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Time -->
+    <input *ngSwitchCase="'time'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- URL -->
+    <input *ngSwitchCase="'url'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- Week -->
+    <input *ngSwitchCase="'week'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- File -->
+    <input *ngSwitchCase="'file'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" [name]="config.name" />
+
+    <!-- color -->
+     <input *ngSwitchCase="'color'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [type]="config.controlType" />
+
+     <!-- Number -->
+    <input *ngSwitchCase="'number'"
+    [formControlName]="config.key"
+    [id]="config.key"
+    [type]="config.controlType"
+    [name]="config.name"
+    [min]="config.min"
+    [max]="config.max" />
+
+     <!-- Dropdown -->
+    <select *ngSwitchCase="'dropdown'" [class]="config.class" [id]="config.key" [formControlName]="config.key">
       <option *ngFor="let opt of config.dropOptions" [value]="opt.key">{{
         opt.value
         }}</option>
     </select>
 
     <!-- Radio Button -->
-    <input *ngSwitchCase="'radio'" [id]="config.key" [formControlName]="config.key" value="config.value" [type]="config.controlType"
+    <input *ngSwitchCase="'radio'" [class]="config.class" [id]="config.key" [formControlName]="config.key" value="config.value" [type]="config.controlType"
       [name]="config.name" [checked]="config.checked" />
 
     <!-- Checkbox -->
-    <input *ngSwitchCase="'checkbox'" [id]="config.key" [formControlName]="config.key" value="config.value" [type]="config.controlType"
+    <input *ngSwitchCase="'checkbox'" [class]="config.class" [id]="config.key" [formControlName]="config.key" value="config.value" [type]="config.controlType"
       [name]="config.name" [checked]="config.checked" />
 
     <!-- Text Area -->
-    <textarea *ngSwitchCase="'textarea'" [formControlName]="config.key" [name]="config.name" [id]="config.key" cols="30"
-      rows="10" placeholder="Testing Placeholder"></textarea>
+    <textarea *ngSwitchCase="'textarea'" [formControlName]="config.key" [class]="config.class" [id]="config.key" [name]="config.name" [cols]="config.cols"
+      [rows]="config.rows" placeholder="Testing Placeholder"></textarea>
 
       <!-- Submit -->
-      <button *ngSwitchCase="'submit'" [disabled]="!form.valid">{{config.buttonLabel}}</button>
+      <button *ngSwitchCase="'submit'"[class]="config.class" [id]="config.key" [disabled]="!form.valid">{{config.buttonLabel}}</button>
 
       <!-- Reset Button -->
-      <button *ngSwitchCase="'reset'">{{config.buttonLabel}}</button>
+      <button *ngSwitchCase="'reset'" [class]="config.class" [id]="config.key">{{config.buttonLabel}}</button>
 
-    <!-- TODO: In the controler Base class add properties for submit button-->
-    <!--TODO: Add a submit button class-->
+
     <!-- TODO: In the controler Base class add properties for output-->
     <!--TODO: Add a output class-->
     <!-- TODO: In the controler Base class add properties for data list -->
