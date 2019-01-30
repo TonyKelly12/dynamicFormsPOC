@@ -89,100 +89,96 @@
     <output *ngSwitchCase="'output'" [name]="config.name" [for]="config.for"></output>
 
 
-
-
-
-
-
-    <!-- Field Set -->
+    <!-- Field Set  TODO: May find a way to put in another file -->
     <fieldset *ngSwitchCase="'fieldset'">
       <div *ngIf="config.legend">
         <legend>{{config.label}}:</legend>
       </div>
       <div *ngFor="let field of config.inputs">
-        {{field.key}}: <div [ngSwitch]="field.controlType">
+        {{field.key}}:
+        <div [ngSwitch]="field.controlType">
           <!-- Text Box -->
-          <input *ngSwitchCase="'textbox'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'textbox'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Date -->
-          <input *ngSwitchCase="'date'" [formControlName]="field.key" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'date'" [formControlName]="field.key" [id]="field.id" [type]="field.controlType"
             [name]="field.name" [min]="field.min" [max]="field.max" />
 
           <!-- Datetime -->
-          <input *ngSwitchCase="'datetime-local'" [formControlName]="field.key" [class]="field.class" [id]="field.key"
+          <input *ngSwitchCase="'datetime-local'" [formControlName]="field.key" [class]="field.class" [id]="field.id"
             [type]="field.controlType" [name]="field.name" />
 
           <!-- Month -->
-          <input *ngSwitchCase="'month'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'month'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Password -->
-          <input *ngSwitchCase="'password'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType" />
+          <input *ngSwitchCase="'password'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType" />
 
           <!-- Email -->
-          <input *ngSwitchCase="'email'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'email'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Search -->
-          <input *ngSwitchCase="'search'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'search'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Phone (Safari only) -->
-          <input *ngSwitchCase="'tel'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'tel'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Time -->
-          <input *ngSwitchCase="'time'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'time'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- URL -->
-          <input *ngSwitchCase="'url'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'url'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- Week -->
-          <input *ngSwitchCase="'week'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'week'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- File -->
-          <input *ngSwitchCase="'file'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'file'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"
             [name]="field.name" />
 
           <!-- color -->
-          <input *ngSwitchCase="'color'" [formControlName]="field.key" [class]="field.class" [id]="field.key" [type]="field.controlType" />
+          <input *ngSwitchCase="'color'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType" />
 
           <!-- Number -->
-          <input *ngSwitchCase="'number'" [formControlName]="field.key" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'number'" [formControlName]="field.key" [id]="field.id" [type]="field.controlType"
             [name]="field.name" [min]="field.min" [max]="field.max" />
 
           <!-- Range -->
-          <input *ngSwitchCase="'range'" [formControlName]="field.key" [id]="field.key" [type]="field.controlType"
+          <input *ngSwitchCase="'range'" [formControlName]="field.key" [id]="field.id" [type]="field.controlType"
             [name]="field.name" [min]="field.min" [max]="field.max" [step]="field.step" />
 
           <!-- Dropdown -->
-          <select *ngSwitchCase="'dropdown'" [class]="field.class" [id]="field.key" [formControlName]="field.key">
+          <select *ngSwitchCase="'dropdown'" [class]="field.class" [id]="field.id" [formControlName]="field.key">
             <option *ngFor="let opt of field.dropOptions" [value]="opt.key">{{
               opt.value
               }}</option>
           </select>
 
           <!-- Radio Button -->
-          <input *ngSwitchCase="'radio'" [class]="field.class" [id]="field.key" [formControlName]="field.key" value="field.value"
+          <input *ngSwitchCase="'radio'" [class]="field.class" [id]="field.id" [formControlName]="field.key" value="field.value"
             [type]="field.controlType" [name]="field.name" [checked]="field.checked" />
 
           <!-- Checkbox -->
-          <input *ngSwitchCase="'checkbox'" [class]="field.class" [id]="field.key" [formControlName]="field.key" value="field.value"
+          <input *ngSwitchCase="'checkbox'" [class]="field.class" [id]="field.id" [formControlName]="field.key" value="field.value"
             [type]="field.controlType" [name]="field.name" [checked]="field.checked" />
 
           <!-- Text Area -->
-          <textarea *ngSwitchCase="'textarea'" [formControlName]="field.key" [class]="field.class" [id]="field.key"
+          <textarea *ngSwitchCase="'textarea'" [formControlName]="field.key" [class]="field.class" [id]="field.id"
             [name]="field.name" [cols]="field.cols" [rows]="field.rows" placeholder="Testing Placeholder"></textarea>
 
           <!-- Submit -->
-          <button *ngSwitchCase="'submit'" [class]="field.class" [id]="field.key" [disabled]="!form.valid">{{field.buttonLabel}}</button>
+          <button *ngSwitchCase="'submit'" [class]="field.class" [id]="field.id" [disabled]="!form.valid">{{field.buttonLabel}}</button>
 
           <!-- Reset Button -->
-          <button *ngSwitchCase="'reset'" [class]="field.class" [id]="field.key">{{field.buttonLabel}}</button>
+          <button *ngSwitchCase="'reset'" [class]="field.class" [id]="field.id">{{field.buttonLabel}}</button>
 
           <!--Output Element-->
           <output *ngSwitchCase="'output'" [name]="field.name" [for]="field.for"></output>
