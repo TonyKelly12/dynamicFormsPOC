@@ -1,4 +1,4 @@
-import { MockFormConfigService } from './../../projects/form-creator/src/lib/services/mock-config.service';
+import { MockFormConfigService } from './mock-config.service';
 import { Component }       from '@angular/core';
 
 @Component({

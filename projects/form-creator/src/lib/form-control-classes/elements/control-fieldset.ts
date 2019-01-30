@@ -13,6 +13,7 @@ export class FieldsetControl extends FormControlBase<string> {
   inputs: FormControlBase<any>[] ;
   label: string;
   legend: boolean;
+  legendLabel: string;
 
   constructor(options: {} = {}) {
     // Because this class derived from FormControlBase must call super and pass in options
@@ -20,6 +21,7 @@ export class FieldsetControl extends FormControlBase<string> {
     this.dropOptions = options['dropOptions'] || [];
     this.inputs = options['inputs'] || [];
     this.label = options['label'] || '';
-    this.legend = options['legend'] || false
+    this.legend = options['legend'] || false;
+    this.legendLabel = options['legendLabel'] || '';
     }
 }

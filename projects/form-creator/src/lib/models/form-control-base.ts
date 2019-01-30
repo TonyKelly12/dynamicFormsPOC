@@ -34,7 +34,7 @@ export interface formOptions {
   for?: string;
   inputs?: FormControlBase<any>[];
   legend?: boolean;
-
+  legendLabel?:string;
   maxlength?: string;
   step?: string;
   size?: string;
@@ -102,7 +102,8 @@ export class FormControlBase<T> {
 
   /** Used with fieldsets. The label of Field set */
   legend?: boolean;
-
+  /** Text that will appear in legend */
+  legendLabel?:string;
   /**
    * The formenctype attribute specifies how the form data should be encoded when submitted (only for forms with method="post").
    * The formenctype attribute overrides the enctype attribute of the <form> element.
@@ -306,5 +307,7 @@ export class FormControlBase<T> {
     this.action = options.action;
     this.formaction = options.formaction;
     this.form = options.form;
+    this.legendLabel = options.legendLabel;
+    this.legend = options.legend
   }
 }

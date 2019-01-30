@@ -91,11 +91,11 @@
 
     <!-- Field Set  TODO: May find a way to put in another file -->
     <fieldset *ngSwitchCase="'fieldset'">
-      <div *ngIf="config.legend">
-        <legend>{{config.label}}:</legend>
+      <div *ngIf="config.legend === true">
+        <legend>{{config.legendLabel}}</legend>
       </div>
       <div *ngFor="let field of config.inputs">
-        {{field.key}}:
+        {{field.key}}
         <div [ngSwitch]="field.controlType">
           <!-- Text Box -->
           <input *ngSwitchCase="'textbox'" [formControlName]="field.key" [class]="field.class" [id]="field.id" [type]="field.controlType"

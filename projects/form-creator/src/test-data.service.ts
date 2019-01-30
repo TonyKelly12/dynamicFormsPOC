@@ -1,31 +1,31 @@
-import { OutputControl } from "./../form-control-classes/elements/control-output";
-import { InputURL } from "../form-control-classes/types/control-url";
+import { OutputControl } from "projects/form-creator/src/lib/form-control-classes/elements/control-output";
+import { InputURL } from "projects/form-creator/src/lib/form-control-classes/types/control-url";
 import { Injectable } from "@angular/core";
 
-import { FormControlBase } from "../models/form-control-base";
-import { InputTextBox } from "../form-control-classes/elements/control-textBox";
-import { DropdownControl } from "../form-control-classes/elements/control-dropdown";
-import { InputRadio } from "../form-control-classes/types/control-radio";
-import { InputTextArea } from "../form-control-classes/elements/control-textarea";
-import { InputCheckbox } from "../form-control-classes/types/control-checkbox";
-import { InputPassword } from "../form-control-classes/types/control-password";
-import { InputEmail } from "../form-control-classes/types/control-email";
-import { InputSubmitButton } from "../form-control-classes/types/control-submit-button";
-import { InputColor } from "../form-control-classes/types/control-color";
-import { InputDate } from "../form-control-classes/types/control-date";
-import { InputFile } from "../form-control-classes/types/control-file";
-import { InputDateTime } from "../form-control-classes/types/control-datetime";
-import { InputSearch } from "../form-control-classes/types/control-search";
-import { InputPhone } from "../form-control-classes/types/control-phone";
-import { InputTime } from "../form-control-classes/types/control-time";
-import { InputWeek } from "../form-control-classes/types/control-week";
-import { InputRange } from "../form-control-classes/types/control-range";
+import { FormControlBase } from "projects/form-creator/src/lib/models/form-control-base";
+import { InputTextBox } from "projects/form-creator/src/lib/form-control-classes/elements/control-textBox";
+import { DropdownControl } from "projects/form-creator/src/lib/form-control-classes/elements/control-dropdown";
+import { InputRadio } from "projects/form-creator/src/lib/form-control-classes/types/control-radio";
+import { InputTextArea } from "projects/form-creator/src/lib/form-control-classes/elements/control-textarea";
+import { InputCheckbox } from "projects/form-creator/src/lib/form-control-classes/types/control-checkbox";
+import { InputPassword } from "projects/form-creator/src/lib/form-control-classes/types/control-password";
+import { InputEmail } from "projects/form-creator/src/lib/form-control-classes/types/control-email";
+import { InputSubmitButton } from "projects/form-creator/src/lib/form-control-classes/types/control-submit-button";
+import { InputColor } from "projects/form-creator/src/lib/form-control-classes/types/control-color";
+import { InputDate } from "projects/form-creator/src/lib/form-control-classes/types/control-date";
+import { InputFile } from "projects/form-creator/src/lib/form-control-classes/types/control-file";
+import { InputDateTime } from "projects/form-creator/src/lib/form-control-classes/types/control-datetime";
+import { InputSearch } from "projects/form-creator/src/lib/form-control-classes/types/control-search";
+import { InputPhone } from "projects/form-creator/src/lib/form-control-classes/types/control-phone";
+import { InputTime } from "projects/form-creator/src/lib/form-control-classes/types/control-time";
+import { InputWeek } from "projects/form-creator/src/lib/form-control-classes/types/control-week";
+import { InputRange } from "projects/form-creator/src/lib/form-control-classes/types/control-range";
 import { Validators } from "@angular/forms";
-import { FieldsetControl } from "../form-control-classes/elements/control-fieldset";
+import { FieldsetControl } from "projects/form-creator/src/lib/form-control-classes/elements/control-fieldset";
 
 @Injectable()
 /** Mock Form config file */
-export class MockFormConfigService {
+export class TestDataService {
   // TODO: get from a remote source of question metadata
   // TODO: make asynchronous
 
@@ -190,7 +190,8 @@ export class MockFormConfigService {
       new FieldsetControl({
         key: "fieldset",
         id: "fieldset",
-        label: "Will See in Legend",
+        legend: true,
+        legendLabel: "I am Legend",
         order: 17,
         inputs: [
           new InputTextBox({
