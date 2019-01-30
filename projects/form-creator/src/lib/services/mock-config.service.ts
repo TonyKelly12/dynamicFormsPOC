@@ -21,6 +21,7 @@ import { InputTime } from '../form-control-classes/types/control-time';
 import { InputWeek } from '../form-control-classes/types/control-week';
 import { InputRange } from '../form-control-classes/types/control-range';
 import { Validators } from '@angular/forms';
+import { FieldsetControl } from '../form-control-classes/elements/control-fieldset';
 
 @Injectable()
 /** Mock Form config file */
@@ -90,6 +91,15 @@ export class MockFormConfigService {
         order: 2
       }),
 
+      new InputRadio({
+        key: 'emailAddress',
+        label: 'Email',
+        checked: false,
+        value: 'Yes',
+        name: 'email',
+        order: 2
+      }),
+
       new InputCheckbox({
         key: 'checking',
         label: 'Yes?',
@@ -110,7 +120,7 @@ export class MockFormConfigService {
       new InputColor({
         key: 'color',
         label: 'Choose Color',
-        order: 8
+        order: 8,
       }),
 
       new InputDate({
@@ -170,6 +180,30 @@ export class MockFormConfigService {
         order: 16,
         for: "range",
         name: "x"
+      }),
+
+      new FieldsetControl({
+        key: 'fieldset',
+        label: 'Will See in Legend',
+        order: 17,
+        inputs: [
+          new InputRadio({
+          key: 'emailAddress',
+          label: 'Email',
+          checked: false,
+          value: 'Yes',
+          name: 'email',
+          order: 2
+        }),
+
+        new InputTextBox({
+          key: 'firstName',
+          label: 'First name',
+          value: 'Bombasto',
+          validation:[Validators.required],
+          order: 1
+        }),
+      ]
       })
 
     ];

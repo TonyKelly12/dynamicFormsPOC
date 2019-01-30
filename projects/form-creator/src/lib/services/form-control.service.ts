@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { FormControl, FormGroup} from '@angular/forms';
+import { FormControl, FormGroup, Validator, ValidatorFn, Validators} from '@angular/forms';
 import { FormControlBase } from '../models/form-control-base';
-
 
 @Injectable({
   providedIn: 'root'
 })
-
 /**
  * Takes in form configs and returns a form specified to the configs and applies
  * configured Validation.
@@ -22,7 +20,11 @@ export class FormControlService {
 
     formConfigs.forEach(formConfig => {
 
-      let vals = []
+      let vals:any= []
+
+      // loops through each validation assigned to the fields config.
+      // must be done in order for new FormControl function to see the
+      // validators are the correct type.
       formConfig.validation.forEach(val$ => vals.push(val$))
 
       // checks to see if field has a validator, if so add validator.
